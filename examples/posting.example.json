@@ -1,0 +1,46 @@
+{
+  "company": "Acme Freight Cloud",
+  "title": "Full Stack Engineer",
+  "level": "mid",
+  "location": "Remote (US)",
+  "work_mode": "remote",
+  "pay": {"min": 125000, "max": 150000, "currency": "USD"},
+  "years_required": 3,
+  "posting_url": "https://boards.greenhouse.io/acmefreightcloud/jobs/4000123456",
+  "apply_url": "https://boards.greenhouse.io/acmefreightcloud/jobs/4000123456#app",
+  "job_id": "4000123456",
+  "category": "full stack",
+  "terms": [
+    {"term": "TypeScript", "weight": 2},
+    {"term": "React", "weight": 2},
+    {"term": "Node.js", "weight": 2, "pattern": "\\bnode(\\.js)?\\b"},
+    {"term": "REST", "weight": 2, "pattern": "\\brest(ful)?\\b"},
+    {"term": "PostgreSQL", "weight": 2, "pattern": "\\bpostgres(ql)?\\b"},
+    {"term": "automated tests", "weight": 2, "pattern": "\\b(integration|unit|automated) tests?\\b|\\bjest\\b|\\bpytest\\b"},
+    {"term": "Full Stack", "weight": 1, "pattern": "\\bfull[- ]?stack\\b"},
+    {"term": "CI/CD", "weight": 1, "pattern": "\\bci/cd\\b"},
+    {"term": "Kubernetes", "weight": 1},
+    {"term": "Docker", "weight": 1},
+    {"term": "Redis", "weight": 1},
+    {"term": "on-call", "weight": 1, "pattern": "\\bon[- ]call\\b"},
+    {"term": "dashboards", "weight": 1, "pattern": "\\bdashboards?\\b"},
+    {"term": "GraphQL", "weight": 1},
+    {"term": "AWS", "weight": 1},
+    {"term": "logistics", "weight": 1, "pattern": "\\blogistics\\b|\\bfreight\\b|\\bshipment"}
+  ],
+  "required": [
+    {"text": "3+ years of professional software engineering experience", "status": "met", "evidence": ["nw", "bl"]},
+    {"text": "Strong TypeScript and React", "status": "met", "evidence": ["nw-1", "pl-1"]},
+    {"text": "Node.js and REST API design", "status": "met", "evidence": ["nw-2"]},
+    {"text": "PostgreSQL or another relational database", "status": "met", "evidence": ["nw-2", "bl-2"]},
+    {"text": "Experience writing automated tests", "status": "met", "evidence": ["nw-5"]}
+  ],
+  "preferred": [
+    {"text": "Docker and Kubernetes", "status": "met", "evidence": ["nw-4"]},
+    {"text": "Redis or other caching", "status": "met", "evidence": ["nw-3"]},
+    {"text": "GraphQL", "status": "missing"},
+    {"text": "AWS", "status": "missing"},
+    {"text": "Logistics or supply chain software", "status": "met", "evidence": ["nw-1"]}
+  ],
+  "level_fit": {"status": "met", "note": "Mid-level; ~4.5 years of experience vs 3+ required", "evidence": ["nw", "bl"]}
+}

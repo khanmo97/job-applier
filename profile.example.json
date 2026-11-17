@@ -1,0 +1,205 @@
+{
+  "_comment": "Fictional example. Copy to profile.json (gitignored) and replace everything. Every fact here must be something you have confirmed is true.",
+  "identity": {
+    "first_name": "Jordan",
+    "last_name": "Rivera",
+    "preferred_name": "Jordan",
+    "name_on_resume": "JORDAN RIVERA",
+    "resume_file_name": "Jordan_Rivera_Resume",
+    "email": "jordan.rivera.jobs@example.com",
+    "phone": "(555) 010-0199",
+    "location_onsite": "Columbus, OH",
+    "location_remote": "Columbus, OH (Remote)",
+    "address": {
+      "street": "100 Example Ave",
+      "city": "Columbus",
+      "state": "OH",
+      "state_full": "Ohio",
+      "zip": "43004",
+      "country": "United States"
+    },
+    "links": {
+      "linkedin": "linkedin.com/in/jordan-rivera-example",
+      "github": "github.com/jordan-rivera-example",
+      "website": "jordanrivera.example.com"
+    }
+  },
+
+  "experience": [
+    {
+      "id": "nw",
+      "title": "Software Engineer II",
+      "company": "Northwind Logistics",
+      "location": "Columbus, OH",
+      "start": "2022-03",
+      "end": "present",
+      "facts": [
+        {"id": "nw-1", "text": "Built a shipment-tracking dashboard in React and TypeScript used by 1,200 dispatchers; cut median page load from 4.1s to 1.3s.", "skills": ["React", "TypeScript"], "terms": ["dashboard", "performance"]},
+        {"id": "nw-2", "text": "Designed and shipped REST APIs in Node.js and Express backed by PostgreSQL for carrier onboarding; reduced onboarding time by 35%.", "skills": ["Node.js", "Express", "PostgreSQL", "REST"], "terms": ["designed", "API design"]},
+        {"id": "nw-3", "text": "Added Redis caching to the rate-quote service, lowering p95 latency by 60%.", "skills": ["Redis"], "terms": ["caching", "latency"]},
+        {"id": "nw-4", "text": "Containerized four services with Docker and deployed them to Kubernetes with GitHub Actions CI/CD.", "skills": ["Docker", "Kubernetes", "GitHub Actions", "CI/CD"], "terms": ["deployment"]},
+        {"id": "nw-5", "text": "Wrote integration tests with Jest and Supertest, raising API test coverage from 41% to 78%.", "skills": ["Jest", "Supertest", "testing"], "terms": ["integration tests"]},
+        {"id": "nw-6", "text": "Took part in the on-call rotation and resolved production incidents, writing postmortems for each.", "skills": ["incident response"], "terms": ["on-call", "production"]},
+        {"id": "nw-7", "text": "Built an internal support assistant that answers dispatcher questions by calling the OpenAI API with live lookups against the shipments API (no vector store).", "skills": ["OpenAI API", "LLM"], "terms": ["LLM", "AI assistant", "tool calling"]}
+      ]
+    },
+    {
+      "id": "bl",
+      "title": "Software Engineer",
+      "company": "Brightline Health",
+      "location": "Cleveland, OH",
+      "start": "2020-06",
+      "end": "2022-02",
+      "facts": [
+        {"id": "bl-1", "text": "Built patient-scheduling features in a Python and Django web app serving 30 clinics.", "skills": ["Python", "Django"], "terms": ["scheduling"]},
+        {"id": "bl-2", "text": "Migrated reporting queries from MySQL views to PostgreSQL, cutting nightly job time from 3 hours to 40 minutes.", "skills": ["MySQL", "PostgreSQL", "SQL"], "terms": ["migration"]},
+        {"id": "bl-3", "text": "Integrated a third-party payments API with webhooks for copay collection.", "skills": ["webhooks", "REST"], "terms": ["payments", "integration"]}
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "id": "pl",
+      "name": "Pantry Ledger",
+      "url": "pantryledger.example.com",
+      "repo_public": false,
+      "stack": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Stripe"],
+      "dates": "2024",
+      "lead_for": ["frontend", "full stack", "payments", "consumer product"],
+      "facts": [
+        {"id": "pl-1", "text": "Built a multi-tenant inventory app for small food pantries with Next.js App Router, TypeScript and Tailwind CSS.", "skills": ["Next.js", "TypeScript", "Tailwind CSS", "React"], "terms": ["multi-tenant"]},
+        {"id": "pl-2", "text": "Added Stripe subscriptions with webhook-driven billing state.", "skills": ["Stripe", "webhooks"], "terms": ["subscriptions", "billing"]}
+      ]
+    },
+    {
+      "id": "tc",
+      "name": "Trailcast",
+      "url": "github.com/jordan-rivera-example/trailcast",
+      "repo_public": true,
+      "stack": ["Python", "FastAPI", "PostgreSQL", "Docker"],
+      "dates": "2023",
+      "lead_for": ["backend", "data", "python"],
+      "facts": [
+        {"id": "tc-1", "text": "Built a FastAPI service that aggregates trail-condition reports from three public APIs on a schedule and serves them to a mobile client.", "skills": ["Python", "FastAPI", "REST"], "terms": ["aggregation"]},
+        {"id": "tc-2", "text": "Wrote pytest suites and ran the service in Docker with PostgreSQL.", "skills": ["pytest", "Docker", "PostgreSQL"], "terms": ["testing"]}
+      ]
+    }
+  ],
+
+  "skills_confirmed": [
+    {"name": "TypeScript", "where": ["work", "project"]},
+    {"name": "JavaScript", "where": ["work", "project"]},
+    {"name": "React", "where": ["work", "project"]},
+    {"name": "Next.js", "where": ["project"]},
+    {"name": "Node.js", "aliases": ["Node"], "where": ["work"]},
+    {"name": "Express", "where": ["work"]},
+    {"name": "Python", "where": ["work", "project"]},
+    {"name": "Django", "where": ["work"]},
+    {"name": "FastAPI", "where": ["project"]},
+    {"name": "PostgreSQL", "aliases": ["Postgres"], "where": ["work", "project"]},
+    {"name": "MySQL", "where": ["work"]},
+    {"name": "SQL", "where": ["work"]},
+    {"name": "Redis", "where": ["work"]},
+    {"name": "REST", "aliases": ["REST APIs", "RESTful"], "where": ["work", "project"]},
+    {"name": "Docker", "where": ["work", "project"]},
+    {"name": "Kubernetes", "aliases": ["K8s"], "where": ["work"]},
+    {"name": "GitHub Actions", "where": ["work"]},
+    {"name": "CI/CD", "where": ["work"]},
+    {"name": "Jest", "where": ["work"]},
+    {"name": "Supertest", "where": ["work"]},
+    {"name": "pytest", "where": ["project"]},
+    {"name": "Tailwind CSS", "aliases": ["Tailwind"], "where": ["project"]},
+    {"name": "Stripe", "where": ["project"]},
+    {"name": "webhooks", "where": ["work", "project"]},
+    {"name": "OpenAI API", "where": ["work"]},
+    {"name": "LLM", "aliases": ["LLMs"], "where": ["work"]},
+    {"name": "Git", "where": ["work", "project"]},
+    {"name": "testing", "where": ["work", "project"]},
+    {"name": "incident response", "where": ["work"]}
+  ],
+
+  "skills_denied": [
+    "GraphQL", "Terraform", "AWS Lambda", "Go", "Rust", "Kafka", "RAG", "vector database", "Java", "Angular"
+  ],
+
+  "overstatement_terms_extra": [],
+
+  "education": [
+    {"id": "edu-1", "school": "Ohio Example University", "degree": "B.S. Computer Science", "location": "Athens, OH", "end": "2020-05", "form_school_search": "Ohio Example", "form_discipline_fallback": "Computer Science"}
+  ],
+
+  "standing_answers": {
+    "authorized_to_work_us": "Yes",
+    "requires_sponsorship": "No",
+    "visa_or_student_status": "No",
+    "non_compete": "No",
+    "veteran_status": "I am not a protected veteran",
+    "age_18_plus": "Yes",
+    "notice_period": "2 weeks",
+    "remote_preference": "Remote",
+    "text_message_consent": "No",
+    "currently_in_school": "No",
+    "how_heard_default": "LinkedIn when the link is from LinkedIn; otherwise the site the link came from",
+    "ai_tools_usage": "I use AI tools to automate and speed up development workflows.",
+    "live_coding_without_ai": "Yes",
+    "salary_expectation": null,
+    "start_date": null,
+    "demographics": {
+      "mode": "decline",
+      "_mode_help": "\"fill\" uses the answers below; \"decline\" picks 'I don't wish to answer' where offered.",
+      "gender": null,
+      "race_ethnicity": null,
+      "hispanic_latino": null,
+      "sexual_orientation": null,
+      "disability": null
+    }
+  },
+
+  "optional_roles": [
+    {
+      "id": "fl",
+      "title": "Contract Developer",
+      "company": "Freelance",
+      "location": "Remote",
+      "start": "2024-01",
+      "end": "present",
+      "concurrent_with": "nw",
+      "facts": [
+        {"id": "fl-1", "text": "Built a booking site with Next.js and Stripe for a local fitness studio.", "skills": ["Next.js", "Stripe"], "terms": []}
+      ],
+      "include_when": [
+        "the role wants client-facing or end-to-end product delivery the main job doesn't show",
+        "the role is remote"
+      ],
+      "leave_off_when": [
+        "the role is hybrid or on-site and the concurrent dates would raise questions",
+        "the main role already covers the requirements",
+        "it would push the resume past one page"
+      ]
+    }
+  ],
+
+  "dealbreakers": {
+    "min_base_salary": 110000,
+    "allowed_work_modes": ["remote", "hybrid"],
+    "hybrid_ok_within": "Columbus, OH",
+    "relocation": false,
+    "clearance_required": false,
+    "max_years_required": 6,
+    "excluded_companies": [],
+    "excluded_role_types": ["ML research", "data scientist", "staffing agency / recruiter posting", "sales engineer"]
+  },
+
+  "resume_rules": {
+    "sections_order": ["skills", "experience", "projects", "education"],
+    "max_pages": 1,
+    "no_summary": true,
+    "never_list_as_experience": [],
+    "notes": []
+  },
+
+  "paths": {
+    "archive": "~/Downloads/Apps"
+  }
+}

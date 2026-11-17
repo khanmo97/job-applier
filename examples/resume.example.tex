@@ -1,0 +1,88 @@
+% Example tailored resume for examples/sample-posting.md, built from profile.example.json.
+\documentclass[letterpaper,10.5pt]{article}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+\usepackage{lmodern}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[margin=0.5in, top=0.45in, bottom=0.45in]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tabularx}
+
+\definecolor{accent}{HTML}{1F5F8B}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\raggedright
+
+\newcommand{\resSection}[1]{%
+  \vspace{5pt}%
+  {\color{accent}\large\bfseries\MakeUppercase{#1}}%
+  \hspace{6pt}{\color{accent}\leaders\hrule height 0.7pt\hfill\kern0pt}\par
+  \vspace{3pt}}
+
+\newcommand{\resRole}[4]{%
+  \vspace{3pt}%
+  {\small\textbf{\color{accent}#1}\textbf{, #2, #3}\hfill\textit{#4}}\par
+  \vspace{1pt}}
+
+\newcommand{\resProject}[3]{%
+  \vspace{3pt}%
+  {\small\textbf{\color{accent}#1} $|$ \textit{#2}\hfill\textit{#3}}\par
+  \vspace{1pt}}
+
+\newenvironment{resBullets}
+  {\begin{itemize}[leftmargin=0.32in, itemsep=1pt, parsep=0pt, topsep=1pt, label={\tiny\raisebox{1.5pt}{$\bullet$}}]\small}
+  {\end{itemize}}
+
+\begin{document}
+
+\begin{center}
+  {\color{accent}\Huge\bfseries JORDAN RIVERA}\\[4pt]
+  \footnotesize Columbus, OH (Remote) \,$|$\, \href{tel:5550100199}{\underline{(555) 010-0199}} \,$|$\, \href{mailto:jordan.rivera.jobs@example.com}{\underline{jordan.rivera.jobs@example.com}} \,$|$\, \href{https://jordanrivera.example.com}{\underline{jordanrivera.example.com}} \,$|$\, \href{https://github.com/jordan-rivera-example}{\underline{github.com/jordan-rivera-example}}
+\end{center}
+\vspace{-4pt}
+
+\resSection{Technical Skills}
+% skills:start
+{\small
+\textbf{Languages:} TypeScript, JavaScript, Python, SQL \\
+\textbf{Frontend:} React, Next.js, Tailwind CSS \\
+\textbf{Backend \& Data:} Node.js, Express, REST, PostgreSQL, Redis, Django, FastAPI \\
+\textbf{Infra \& Testing:} Docker, Kubernetes, GitHub Actions, CI/CD, Jest, Supertest, pytest
+\par}
+% skills:end
+
+\resSection{Experience}
+\resRole{Software Engineer II}{Northwind Logistics}{Columbus, OH}{Mar 2022 -- Present} % id: nw
+\begin{resBullets}
+  \item Built a shipment-tracking dashboard in \textbf{React} and \textbf{TypeScript} used by \textbf{1,200} dispatchers; cut median page load from \textbf{4.1s to 1.3s}. % fact: nw-1
+  \item Designed \textbf{REST} APIs in \textbf{Node.js} and Express on \textbf{PostgreSQL} for carrier onboarding, reducing onboarding time by \textbf{35\%}. % fact: nw-2
+  \item Added \textbf{Redis} caching to the rate-quote service, lowering p95 latency by \textbf{60\%}. % fact: nw-3
+  \item Containerized four services with \textbf{Docker} and deployed them to \textbf{Kubernetes} through a GitHub Actions \textbf{CI/CD} pipeline. % fact: nw-4
+  \item Wrote integration tests with \textbf{Jest} and Supertest, raising API test coverage from \textbf{41\% to 78\%}. % fact: nw-5
+  \item Served in the on-call rotation, resolving production incidents and writing a postmortem for each. % fact: nw-6
+\end{resBullets}
+
+\resRole{Software Engineer}{Brightline Health}{Cleveland, OH}{Jun 2020 -- Feb 2022} % id: bl
+\begin{resBullets}
+  \item Migrated reporting queries from MySQL views to \textbf{PostgreSQL}, cutting a nightly job from \textbf{3 hours to 40 minutes}. % fact: bl-2
+  \item Built patient-scheduling features in a Python and Django web app serving \textbf{30} clinics. % fact: bl-1
+  \item Integrated a third-party payments API using webhooks for copay collection. % fact: bl-3
+\end{resBullets}
+
+\resSection{Projects}
+\resProject{Pantry Ledger}{Next.js, React, TypeScript, Tailwind CSS, Stripe}{2024} % id: pl
+\begin{resBullets}
+  \item Built a multi-tenant inventory app for small food pantries with Next.js App Router, \textbf{TypeScript} and Tailwind CSS. % fact: pl-1
+  \item Added Stripe subscriptions with webhook-driven billing state. % fact: pl-2
+\end{resBullets}
+
+\resSection{Education}
+{\small\textbf{B.S. Computer Science}, Ohio Example University, Athens, OH\hfill\textit{May 2020}\par} % id: edu-1
+
+\end{document}

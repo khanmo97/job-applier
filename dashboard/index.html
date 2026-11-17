@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Job Applications</title>
+<style>
+:root {
+  color-scheme: light;
+  --surface-0: #f4f4f2; --surface-1: #fcfcfb; --border: #e3e2de; --grid: #ecebe7;
+  --text-primary: #0b0b0b; --text-secondary: #52514e; --text-muted: #7a7974;
+  --series-1: #2a78d6; --series-2: #eb6834; --track: #ecebe7; --focus: #2a78d6;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --surface-0: #121211; --surface-1: #1a1a19; --border: #2e2e2c; --grid: #262625;
+    --text-primary: #f0efec; --text-secondary: #c3c2b7; --text-muted: #8f8e86;
+    --series-1: #3987e5; --series-2: #d95926; --track: #2a2a28; --focus: #3987e5;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface-0: #121211; --surface-1: #1a1a19; --border: #2e2e2c; --grid: #262625;
+  --text-primary: #f0efec; --text-secondary: #c3c2b7; --text-muted: #8f8e86;
+  --series-1: #3987e5; --series-2: #d95926; --track: #2a2a28; --focus: #3987e5;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--surface-0); color: var(--text-primary);
+  font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+main { max-width: 1180px; margin: 0 auto; padding: 24px 16px 48px; }
+header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; margin-bottom: 16px; }
+h1 { font-size: 22px; margin: 0; letter-spacing: -0.01em; }
+h2 { font-size: 13px; font-weight: 600; margin: 0 0 2px; color: var(--text-primary); }
+.sub { color: var(--text-muted); font-size: 12px; margin: 0 0 12px; }
+.banner { background: var(--surface-1); border: 1px dashed var(--border); border-radius: 8px; padding: 8px 12px;
+  color: var(--text-secondary); font-size: 13px; margin-bottom: 16px; }
+.banner code { font-size: 12px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr)); gap: 12px; margin-bottom: 12px; }
+.tile, .card { min-width: 0; background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+.tile .label { color: var(--text-secondary); font-size: 12px; }
+.tile .value { font-size: 28px; font-weight: 650; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.tile .hint { color: var(--text-muted); font-size: 12px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 12px; margin-bottom: 12px; }
+@media (max-width: 420px) { .grid { grid-template-columns: 1fr; } }
+svg { display: block; width: 100%; height: auto; overflow: visible; }
+svg text { fill: var(--text-secondary); font-size: 11px; font-variant-numeric: tabular-nums; }
+svg .val { fill: var(--text-primary); font-weight: 600; }
+.legend { display: flex; gap: 14px; font-size: 12px; color: var(--text-secondary); margin: 4px 0 6px; flex-wrap: wrap; }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 12px; }
+.filters label { font-size: 12px; color: var(--text-secondary); display: flex; flex-direction: column; gap: 3px; }
+.filters input, .filters select { font: inherit; font-size: 13px; padding: 6px 8px; border-radius: 6px;
+  border: 1px solid var(--border); background: var(--surface-0); color: var(--text-primary); min-width: 0; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--grid); white-space: nowrap; }
+th { color: var(--text-secondary); font-weight: 600; font-size: 12px; cursor: pointer; user-select: none; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+td.role { white-space: normal; min-width: 180px; }
+a { color: var(--series-1); }
+.pill { display: inline-block; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--border); font-size: 12px; color: var(--text-primary); }
+.empty { color: var(--text-muted); padding: 24px 0; text-align: center; }
+#tip { position: fixed; pointer-events: none; z-index: 10; background: var(--surface-1); color: var(--text-primary);
+  border: 1px solid var(--border); border-radius: 6px; padding: 6px 9px; font-size: 12px; box-shadow: 0 4px 14px rgba(0,0,0,.12);
+  display: none; max-width: 260px; }
+.hit { fill: transparent; cursor: default; }
+.mark:hover, .hit:hover + .mark { opacity: .8; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Job applications</h1>
+    <span class="sub" id="asof"></span>
+  </header>
+  <div class="banner" id="banner" hidden></div>
+
+  <section class="tiles" id="tiles"></section>
+
+  <section class="grid">
+    <div class="card"><h2>Funnel</h2><p class="sub">Of submitted applications. A response is any reply, including a rejection.</p><div id="funnel"></div></div>
+    <div class="card"><h2>Current status</h2><p class="sub">All records, including roles scored but not applied (To do).</p><div id="status"></div></div>
+  </section>
+
+  <section class="grid">
+    <div class="card"><h2>Applications per week</h2><p class="sub">Week starting Monday.</p><div id="weekly"></div></div>
+    <div class="card"><h2>Time to first response</h2><p class="sub">Days from applying to the first reply.</p><div id="ttr"></div></div>
+  </section>
+
+  <section class="grid">
+    <div class="card"><h2>Response rate by role category</h2><p class="sub">n = applications in the category.</p><div id="bycat"></div></div>
+    <div class="card"><h2>Response rate with and without an optional role</h2><p class="sub">Optional roles from your profile, included only when recommended.</p><div id="byopt"></div></div>
+  </section>
+
+  <section class="grid">
+    <div class="card"><h2>Scores vs outcome</h2><p class="sub">Tool estimates, not real ATS results. Each dot is one application.</p>
+      <div class="legend"><span><i style="background:var(--series-1)"></i>Got a response</span><span><i style="background:var(--series-2)"></i>No response yet</span></div>
+      <div id="scatter"></div></div>
+    <div class="card"><h2>Response rate by score band</h2><p class="sub">Average of ATS and fit scores.</p><div id="bands"></div></div>
+  </section>
+
+  <section class="card">
+    <h2>Applications</h2>
+    <div class="filters">
+      <label>Status<select id="f-status"><option value="">All</option></select></label>
+      <label>Company<input id="f-company" type="search" placeholder="Search company or role"></label>
+      <label>From<input id="f-from" type="date"></label>
+      <label>To<input id="f-to" type="date"></label>
+    </div>
+    <div class="table-wrap"><table id="table"><thead></thead><tbody></tbody></table></div>
+  </section>
+</main>
+<div id="tip" role="tooltip"></div>
+
+<script src="example-data.js"></script>
+<script src="data.js" onerror="void 0"></script>
+<script>
+(function () {
+  "use strict";
+  const real = Array.isArray(window.APPLICATIONS) && window.APPLICATIONS.length > 0;
+  const ROWS = real ? window.APPLICATIONS : (window.EXAMPLE_APPLICATIONS || []);
+  const banner = document.getElementById("banner");
+  if (!real) {
+    banner.hidden = false;
+    banner.innerHTML = "Showing <strong>example data</strong> for a fictional person. Run <code>python3 scripts/build_dashboard.py</code> to load your own tracker.";
+  }
+
+  const STATUSES = ["To do", "Applied", "Assessment", "Recruiter screen", "Interviewing", "Offer", "Rejected", "Withdrawn", "No response"];
+  const RESPONSE = new Set(["Assessment", "Recruiter screen", "Interviewing", "Offer", "Rejected"]);
+  const INTERVIEW = new Set(["Recruiter screen", "Interviewing", "Offer"]);
+  const DAY = 86400000;
+  const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const pct = (a, b) => b ? Math.round(a / b * 100) : 0;
+  const d = s => new Date(s + "T00:00:00");
+
+  const applied = ROWS.filter(r => r.status !== "To do" && r.applied_date);
+  applied.forEach(r => {
+    const h = r.status_history || [];
+    r._responded = h.some(x => RESPONSE.has(x.status));
+    r._interview = h.some(x => INTERVIEW.has(x.status));
+    r._offer = h.some(x => x.status === "Offer");
+    const first = h.filter(x => RESPONSE.has(x.status)).sort((a, b) => a.date < b.date ? -1 : 1)[0];
+    r._ttr = first ? Math.max(0, Math.round((d(first.date) - d(r.applied_date)) / DAY)) : null;
+    r._cat = r.category || guessCategory(r.role);
+    r._opt = (r.optional_roles_included || []).length > 0;
+  });
+  function guessCategory(role) {
+    const t = (role || "").toLowerCase();
+    if (/support|solutions|customer/.test(t)) return "support engineering";
+    if (/\b(ai|ml|llm|machine learning)\b/.test(t)) return "AI";
+    if (/front ?end|ui\b/.test(t)) return "frontend";
+    if (/back ?end|platform|infra|api/.test(t)) return "backend";
+    if (/full[- ]?stack/.test(t)) return "full stack";
+    return "other";
+  }
+
+  const last = ROWS.flatMap(r => (r.status_history || []).map(h => h.date)).sort().pop();
+  document.getElementById("asof").textContent = last ? "Last activity " + last : "";
+
+  // ---------- tiles ----------
+  const responded = applied.filter(r => r._responded).length;
+  const interviews = applied.filter(r => r._interview).length;
+  const offers = applied.filter(r => r._offer).length;
+  const ttrs = applied.map(r => r._ttr).filter(x => x != null).sort((a, b) => a - b);
+  const median = ttrs.length ? ttrs[Math.floor((ttrs.length - 1) / 2)] : null;
+  const tiles = [
+    ["Submitted", applied.length, ROWS.length - applied.length + " more scored, not applied"],
+    ["Response rate", pct(responded, applied.length) + "%", responded + " replied"],
+    ["Interview rate", pct(interviews, applied.length) + "%", interviews + " reached a screen or interview"],
+    ["Median days to reply", median == null ? "–" : median, ttrs.length + " with a reply"],
+    ["Offers", offers, ""],
+  ];
+  document.getElementById("tiles").innerHTML = tiles.map(([l, v, h]) =>
+    `<div class="tile"><div class="label">${esc(l)}</div><div class="value">${esc(v)}</div><div class="hint">${esc(h)}</div></div>`).join("");
+
+  // ---------- chart helpers ----------
+  const tip = document.getElementById("tip");
+  document.addEventListener("mousemove", e => {
+    const t = e.target.closest("[data-tip]");
+    if (!t) { tip.style.display = "none"; return; }
+    tip.innerHTML = t.getAttribute("data-tip");
+    tip.style.display = "block";
+    const x = Math.min(e.clientX + 12, window.innerWidth - tip.offsetWidth - 8);
+    tip.style.left = x + "px"; tip.style.top = (e.clientY + 14) + "px";
+  });
+
+  // Horizontal bars: rows = [{label, value, max?, text, tip}]
+  function hbars(el, rows, opts = {}) {
+    if (!rows.length) { el.innerHTML = '<div class="empty">No data yet</div>'; return; }
+    const W = 520, lw = opts.labelWidth || 130, bh = 16, gap = 12, vw = 70;
+    const H = rows.length * (bh + gap);
+    const max = opts.max || Math.max(1, ...rows.map(r => r.value));
+    const bw = W - lw - vw;
+    const parts = rows.map((r, i) => {
+      const y = i * (bh + gap);
+      const w = Math.max(r.value > 0 ? 4 : 0, r.value / max * bw);
+      return `<g>
+        <text x="0" y="${y + bh / 2 + 4}">${esc(r.label)}</text>
+        <rect x="${lw}" y="${y}" width="${bw}" height="${bh}" rx="4" fill="var(--track)"></rect>
+        <rect class="mark" x="${lw}" y="${y}" width="${w}" height="${bh}" rx="4" fill="var(--series-1)"></rect>
+        <text class="val" x="${lw + bw + 8}" y="${y + bh / 2 + 4}">${esc(r.text)}</text>
+        <rect class="hit" x="0" y="${y - gap / 2}" width="${W}" height="${bh + gap}" data-tip="${esc(r.tip)}"></rect>
+      </g>`;
+    }).join("");
+    el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(opts.aria || "bar chart")}">${parts}</svg>`;
+  }
+
+  // ---------- funnel ----------
+  const fun = [["Submitted", applied.length], ["Responded", responded], ["Screen or interview", interviews], ["Offer", offers]];
+  hbars(document.getElementById("funnel"), fun.map(([l, v]) => ({
+    label: l, value: v, max: applied.length, text: `${v} · ${pct(v, applied.length)}%`,
+    tip: `<b>${esc(l)}</b><br>${v} of ${applied.length} submitted (${pct(v, applied.length)}%)`
+  })), { max: Math.max(1, applied.length), aria: "Application funnel" });
+
+  // ---------- status ----------
+  hbars(document.getElementById("status"), STATUSES.map(s => {
+    const v = ROWS.filter(r => r.status === s).length;
+    return { label: s, value: v, text: String(v), tip: `<b>${esc(s)}</b><br>${v} record(s)` };
+  }).filter(r => r.value > 0), { aria: "Records by current status" });
+
+  // ---------- weekly ----------
+  (function () {
+    const el = document.getElementById("weekly");
+    if (!applied.length) { el.innerHTML = '<div class="empty">No data yet</div>'; return; }
+    const monday = s => { const x = d(s); x.setDate(x.getDate() - ((x.getDay() + 6) % 7)); return x; };
+    const counts = new Map();
+    applied.forEach(r => { const k = monday(r.applied_date).toISOString().slice(0, 10); counts.set(k, (counts.get(k) || 0) + 1); });
+    const keys = [...counts.keys()].sort();
+    const weeks = [];
+    for (let t = d(keys[0]); t <= d(keys[keys.length - 1]); t = new Date(t.getTime() + 7 * DAY)) weeks.push(t.toISOString().slice(0, 10));
+    const W = 520, H = 180, pl = 26, pb = 22, max = Math.max(...counts.values());
+    const step = (W - pl) / weeks.length, bw = Math.max(4, Math.min(36, step - 6));
+    const ticks = [0, Math.ceil(max / 2), max];
+    let s = ticks.map(t => { const y = H - pb - t / max * (H - pb - 8);
+      return `<line x1="${pl}" x2="${W}" y1="${y}" y2="${y}" stroke="var(--grid)"></line><text x="${pl - 6}" y="${y + 4}" text-anchor="end">${t}</text>`; }).join("");
+    weeks.forEach((w, i) => {
+      const v = counts.get(w) || 0, h = v / max * (H - pb - 8), x = pl + i * step + (step - bw) / 2, y = H - pb - h;
+      const lab = d(w).toLocaleDateString(undefined, { month: "short", day: "numeric" });
+      s += `<path class="mark" d="M${x},${H - pb} V${y + Math.min(4, h)} q0,-4 4,-4 H${x + bw - 4} q4,0 4,4 V${H - pb} Z" fill="var(--series-1)" ${h ? "" : 'opacity="0"'}></path>`;
+      if (weeks.length <= 12 || i % Math.ceil(weeks.length / 8) === 0) s += `<text x="${x + bw / 2}" y="${H - 6}" text-anchor="middle">${esc(lab)}</text>`;
+      s += `<rect class="hit" x="${pl + i * step}" y="0" width="${step}" height="${H - pb}" data-tip="<b>Week of ${esc(lab)}</b><br>${v} application(s)"></rect>`;
+    });
+    el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Applications per week">${s}</svg>`;
+  })();
+
+  // ---------- time to first response ----------
+  const BUCKETS = [["0–7 days", 0, 7], ["8–14 days", 8, 14], ["15–21 days", 15, 21], ["22–30 days", 22, 30], ["31+ days", 31, 1e9]];
+  hbars(document.getElementById("ttr"), ttrs.length ? BUCKETS.map(([l, a, b]) => {
+    const v = ttrs.filter(x => x >= a && x <= b).length;
+    return { label: l, value: v, text: String(v), tip: `<b>${l}</b><br>${v} first response(s)` };
+  }) : [], { aria: "Time to first response" });
+
+  // ---------- by category / optional role ----------
+  function rateRows(groups) {
+    return [...groups.entries()].sort((a, b) => b[1].length - a[1].length).map(([k, rs]) => {
+      const r = rs.filter(x => x._responded).length;
+      return { label: k, value: pct(r, rs.length), text: `${pct(r, rs.length)}% · n=${rs.length}`,
+        tip: `<b>${esc(k)}</b><br>${r} of ${rs.length} responded (${pct(r, rs.length)}%)` };
+    });
+  }
+  const byCat = new Map(); applied.forEach(r => { if (!byCat.has(r._cat)) byCat.set(r._cat, []); byCat.get(r._cat).push(r); });
+  hbars(document.getElementById("bycat"), rateRows(byCat), { max: 100, aria: "Response rate by role category" });
+  const byOpt = new Map([["Included", applied.filter(r => r._opt)], ["Not included", applied.filter(r => !r._opt)]].filter(([, v]) => v.length));
+  hbars(document.getElementById("byopt"), rateRows(byOpt), { max: 100, aria: "Response rate by optional role" });
+
+  // ---------- scatter ----------
+  (function () {
+    const el = document.getElementById("scatter");
+    const pts = applied.filter(r => r.ats_score != null && r.fit_score != null);
+    if (!pts.length) { el.innerHTML = '<div class="empty">No scored applications yet</div>'; return; }
+    const W = 520, H = 240, pl = 34, pb = 30, pt = 8, pr = 10;
+    const lo = Math.min(75, ...pts.map(p => Math.min(p.ats_score, p.fit_score))) - 1, hi = 100;
+    const X = v => pl + (v - lo) / (hi - lo) * (W - pl - pr), Y = v => H - pb - (v - lo) / (hi - lo) * (H - pb - pt);
+    let s = "";
+    for (let t = Math.ceil(lo / 5) * 5; t <= hi; t += 5) {
+      s += `<line x1="${pl}" x2="${W - pr}" y1="${Y(t)}" y2="${Y(t)}" stroke="var(--grid)"></line><text x="${pl - 6}" y="${Y(t) + 4}" text-anchor="end">${t}</text>`;
+      s += `<text x="${X(t)}" y="${H - pb + 16}" text-anchor="middle">${t}</text>`;
+    }
+    s += `<text x="${(W + pl) / 2}" y="${H - 2}" text-anchor="middle">ATS match</text>`;
+    s += `<text x="10" y="${(H - pb) / 2}" text-anchor="middle" transform="rotate(-90 10 ${(H - pb) / 2})">Fit</text>`;
+    pts.slice().sort((a, b) => a._responded - b._responded).forEach(p => {
+      const c = p._responded ? "var(--series-1)" : "var(--series-2)";
+      const t = `<b>${esc(p.company)}</b><br>${esc(p.role)}<br>ATS ${p.ats_score} · Fit ${p.fit_score}<br>${esc(p.status)}`;
+      s += `<circle class="mark" cx="${X(p.ats_score)}" cy="${Y(p.fit_score)}" r="5" fill="${c}" stroke="var(--surface-1)" stroke-width="2"></circle>`;
+      s += `<circle class="hit" cx="${X(p.ats_score)}" cy="${Y(p.fit_score)}" r="10" data-tip="${esc(t)}"></circle>`;
+    });
+    el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="ATS score vs fit score, colored by response">${s}</svg>`;
+  })();
+
+  (function () {
+    const bands = [["Under 80", 0, 79.99], ["80–84", 80, 84.99], ["85–89", 85, 89.99], ["90+", 90, 101]];
+    const groups = new Map();
+    applied.filter(r => r.ats_score != null && r.fit_score != null).forEach(r => {
+      const avg = (r.ats_score + r.fit_score) / 2;
+      const b = bands.find(([, a, z]) => avg >= a && avg <= z)[0];
+      if (!groups.has(b)) groups.set(b, []); groups.get(b).push(r);
+    });
+    const ordered = new Map(bands.map(b => b[0]).filter(b => groups.has(b)).map(b => [b, groups.get(b)]));
+    const rows = [...ordered.entries()].map(([k, rs]) => {
+      const r = rs.filter(x => x._responded).length;
+      return { label: k, value: pct(r, rs.length), text: `${pct(r, rs.length)}% · n=${rs.length}`,
+        tip: `<b>Score ${esc(k)}</b><br>${r} of ${rs.length} responded` };
+    });
+    hbars(document.getElementById("bands"), rows, { max: 100, aria: "Response rate by score band" });
+  })();
+
+  // ---------- table ----------
+  const fStatus = document.getElementById("f-status"), fCo = document.getElementById("f-company"),
+    fFrom = document.getElementById("f-from"), fTo = document.getElementById("f-to");
+  STATUSES.filter(s => ROWS.some(r => r.status === s)).forEach(s => fStatus.insertAdjacentHTML("beforeend", `<option>${esc(s)}</option>`));
+  const COLS = [
+    ["applied_date", "Applied"], ["company", "Company"], ["role", "Role"], ["status", "Status"],
+    ["ats_score", "ATS", "num"], ["fit_score", "Fit", "num"], ["_first", "First reply", "num"], ["_links", "Links"],
+  ];
+  let sortKey = "applied_date", sortDir = -1;
+  const thead = document.querySelector("#table thead"), tbody = document.querySelector("#table tbody");
+  function renderHead() {
+    thead.innerHTML = "<tr>" + COLS.map(([k, l, c]) => `<th class="${c || ""}" data-k="${k}" tabindex="0" aria-sort="${k === sortKey ? (sortDir > 0 ? "ascending" : "descending") : "none"}">${esc(l)}${k === sortKey ? (sortDir > 0 ? " ↑" : " ↓") : ""}</th>`).join("") + "</tr>";
+  }
+  function safeHref(u) { return /^https?:\/\//i.test(u || "") ? u : null; }
+  function renderBody() {
+    const q = fCo.value.trim().toLowerCase();
+    const rows = ROWS.filter(r =>
+      (!fStatus.value || r.status === fStatus.value) &&
+      (!q || (r.company + " " + r.role).toLowerCase().includes(q)) &&
+      (!fFrom.value || (r.applied_date || r.created || "") >= fFrom.value) &&
+      (!fTo.value || (r.applied_date || r.created || "").slice(0, 10) <= fTo.value));
+    rows.forEach(r => { r._first = r._ttr == null ? "" : r._ttr + "d"; });
+    rows.sort((a, b) => {
+      let x = a[sortKey], y = b[sortKey];
+      if (sortKey === "_first") { x = a._ttr; y = b._ttr; }
+      if (x == null) return 1; if (y == null) return -1;
+      return (x < y ? -1 : x > y ? 1 : 0) * sortDir;
+    });
+    tbody.innerHTML = rows.length ? rows.map(r => {
+      const links = [];
+      const p = safeHref(r.posting_url); if (p) links.push(`<a href="${esc(p)}" target="_blank" rel="noopener noreferrer">Posting</a>`);
+      if (r._resume_dir) links.push(`<a href="${esc("file://" + encodeURI(r._resume_dir))}" title="${esc(r._resume_dir)}">Resume folder</a>`);
+      else if (r.resume_path) links.push(`<span title="${esc(r.resume_path)}" style="color:var(--text-muted)">Resume</span>`);
+      return `<tr><td>${esc(r.applied_date || "–")}</td><td>${esc(r.company)}</td><td class="role">${esc(r.role)}</td>
+        <td><span class="pill">${esc(r.status)}</span></td><td class="num">${esc(r.ats_score ?? "")}</td><td class="num">${esc(r.fit_score ?? "")}</td>
+        <td class="num">${esc(r._first || "")}</td><td>${links.join(" · ")}</td></tr>`;
+    }).join("") : `<tr><td colspan="${COLS.length}" class="empty">No applications match these filters</td></tr>`;
+  }
+  thead.addEventListener("click", e => { const th = e.target.closest("th"); if (!th) return;
+    const k = th.dataset.k; if (k === "_links") return; sortDir = k === sortKey ? -sortDir : 1; sortKey = k; renderHead(); renderBody(); });
+  thead.addEventListener("keydown", e => { if (e.key === "Enter") e.target.click(); });
+  [fStatus, fCo, fFrom, fTo].forEach(el => el.addEventListener("input", renderBody));
+  ROWS.forEach(r => { if (!("_ttr" in r)) r._ttr = null; });
+  renderHead(); renderBody();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1006 @@
+[
+  {
+    "id": "2026-09-08-acmefreightcloud-0",
+    "company": "Acme Freight Cloud",
+    "role": "Full Stack Engineer",
+    "category": "full stack",
+    "status": "No response",
+    "applied_date": "2026-09-08",
+    "next_step": "",
+    "pay_range": "$115k–$175k",
+    "location": "Remote (US)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Acme Freight Cloud/Full Stack Engineer/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [],
+    "job_id": "4000100000",
+    "posting_url": "https://boards.greenhouse.io/acmefreightcloud/jobs/4000100000",
+    "apply_url": "https://boards.greenhouse.io/acmefreightcloud/jobs/4000100000#app",
+    "ats_score": 84,
+    "fit_score": 86,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-09-08",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      },
+      {
+        "date": "2026-10-08",
+        "status": "No response",
+        "source": "manual",
+        "detail": "no change for 30+ days"
+      }
+    ],
+    "created": "2026-09-08T10:00:00",
+    "updated": "2026-10-08T10:00:00"
+  },
+  {
+    "id": "2026-09-09-bluebirdanalytics-1",
+    "company": "Bluebird Analytics",
+    "role": "Backend Engineer",
+    "category": "backend",
+    "status": "Rejected",
+    "applied_date": "2026-09-09",
+    "next_step": "",
+    "pay_range": "$115k–$150k",
+    "location": "Remote (US)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Bluebird Analytics/Backend Engineer/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [],
+    "job_id": "4000100137",
+    "posting_url": "https://boards.greenhouse.io/bluebirdanalytics/jobs/4000100137",
+    "apply_url": "https://boards.greenhouse.io/bluebirdanalytics/jobs/4000100137#app",
+    "ats_score": 86,
+    "fit_score": 80,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-09-09",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      },
+      {
+        "date": "2026-09-19",
+        "status": "Rejected",
+        "source": "email",
+        "detail": "email: (example)"
+      }
+    ],
+    "created": "2026-09-09T10:00:00",
+    "updated": "2026-09-19T10:00:00"
+  },
+  {
+    "id": "2026-09-11-cobaltpay-2",
+    "company": "Cobalt Pay",
+    "role": "Software Engineer, AI Products",
+    "category": "AI",
+    "status": "No response",
+    "applied_date": "2026-09-11",
+    "next_step": "",
+    "pay_range": "$115k–$175k",
+    "location": "Columbus, OH (Hybrid)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Cobalt Pay/Software Engineer, AI Products/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [],
+    "job_id": "4000100274",
+    "posting_url": "https://boards.greenhouse.io/cobaltpay/jobs/4000100274",
+    "apply_url": "https://boards.greenhouse.io/cobaltpay/jobs/4000100274#app",
+    "ats_score": 83,
+    "fit_score": 83,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-09-11",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      },
+      {
+        "date": "2026-10-11",
+        "status": "No response",
+        "source": "manual",
+        "detail": "no change for 30+ days"
+      }
+    ],
+    "created": "2026-09-11T10:00:00",
+    "updated": "2026-10-11T10:00:00"
+  },
+  {
+    "id": "2026-09-14-driftwoodhealth-3",
+    "company": "Driftwood Health",
+    "role": "Support Engineer",
+    "category": "support engineering",
+    "status": "No response",
+    "applied_date": "2026-09-14",
+    "next_step": "",
+    "pay_range": "$130k–$160k",
+    "location": "Remote (US)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Driftwood Health/Support Engineer/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [],
+    "job_id": "4000100411",
+    "posting_url": "https://boards.greenhouse.io/driftwoodhealth/jobs/4000100411",
+    "apply_url": "https://boards.greenhouse.io/driftwoodhealth/jobs/4000100411#app",
+    "ats_score": 81,
+    "fit_score": 88,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-09-14",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      },
+      {
+        "date": "2026-10-14",
+        "status": "No response",
+        "source": "manual",
+        "detail": "no change for 30+ days"
+      }
+    ],
+    "created": "2026-09-14T10:00:00",
+    "updated": "2026-10-14T10:00:00"
+  },
+  {
+    "id": "2026-09-18-emberrobotics-4",
+    "company": "Ember Robotics",
+    "role": "Frontend Engineer",
+    "category": "frontend",
+    "status": "No response",
+    "applied_date": "2026-09-18",
+    "next_step": "",
+    "pay_range": "$120k–$150k",
+    "location": "Columbus, OH (Hybrid)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Ember Robotics/Frontend Engineer/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [],
+    "job_id": "4000100548",
+    "posting_url": "https://boards.greenhouse.io/emberrobotics/jobs/4000100548",
+    "apply_url": "https://boards.greenhouse.io/emberrobotics/jobs/4000100548#app",
+    "ats_score": 89,
+    "fit_score": 88,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-09-18",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      },
+      {
+        "date": "2026-10-18",
+        "status": "No response",
+        "source": "manual",
+        "detail": "no change for 30+ days"
+      }
+    ],
+    "created": "2026-09-18T10:00:00",
+    "updated": "2026-10-18T10:00:00"
+  },
+  {
+    "id": "2026-09-19-fernwaytravel-5",
+    "company": "Fernway Travel",
+    "role": "Software Engineer II",
+    "category": "full stack",
+    "status": "Assessment",
+    "applied_date": "2026-09-19",
+    "next_step": "Take-home due in 5 days",
+    "pay_range": "$115k–$175k",
+    "location": "Remote (US)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Fernway Travel/Software Engineer II/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [],
+    "job_id": "4000100685",
+    "posting_url": "https://boards.greenhouse.io/fernwaytravel/jobs/4000100685",
+    "apply_url": "https://boards.greenhouse.io/fernwaytravel/jobs/4000100685#app",
+    "ats_score": 91,
+    "fit_score": 81,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-09-19",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      },
+      {
+        "date": "2026-09-24",
+        "status": "Assessment",
+        "source": "email",
+        "detail": "email: (example)"
+      }
+    ],
+    "created": "2026-09-19T10:00:00",
+    "updated": "2026-09-24T10:00:00"
+  },
+  {
+    "id": "2026-09-23-graniteledger-6",
+    "company": "Granite Ledger",
+    "role": "Full Stack Engineer",
+    "category": "full stack",
+    "status": "Recruiter screen",
+    "applied_date": "2026-09-23",
+    "next_step": "Recruiter call",
+    "pay_range": "$140k–$160k",
+    "location": "Remote (US)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Granite Ledger/Full Stack Engineer/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [
+      "fl"
+    ],
+    "job_id": "4000100822",
+    "posting_url": "https://boards.greenhouse.io/graniteledger/jobs/4000100822",
+    "apply_url": "https://boards.greenhouse.io/graniteledger/jobs/4000100822#app",
+    "ats_score": 93,
+    "fit_score": 92,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-09-23",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      },
+      {
+        "date": "2026-10-06",
+        "status": "Recruiter screen",
+        "source": "email",
+        "detail": "email: (example)"
+      }
+    ],
+    "created": "2026-09-23T10:00:00",
+    "updated": "2026-10-06T10:00:00"
+  },
+  {
+    "id": "2026-09-23-harborai-7",
+    "company": "Harbor AI",
+    "role": "Backend Engineer",
+    "category": "backend",
+    "status": "No response",
+    "applied_date": "2026-09-23",
+    "next_step": "",
+    "pay_range": "$140k–$160k",
+    "location": "Columbus, OH (Hybrid)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Harbor AI/Backend Engineer/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [],
+    "job_id": "4000100959",
+    "posting_url": "https://boards.greenhouse.io/harborai/jobs/4000100959",
+    "apply_url": "https://boards.greenhouse.io/harborai/jobs/4000100959#app",
+    "ats_score": 87,
+    "fit_score": 81,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-09-23",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      },
+      {
+        "date": "2026-10-23",
+        "status": "No response",
+        "source": "manual",
+        "detail": "no change for 30+ days"
+      }
+    ],
+    "created": "2026-09-23T10:00:00",
+    "updated": "2026-10-23T10:00:00"
+  },
+  {
+    "id": "2026-09-28-indigolearning-8",
+    "company": "Indigo Learning",
+    "role": "Software Engineer, AI Products",
+    "category": "AI",
+    "status": "Assessment",
+    "applied_date": "2026-09-28",
+    "next_step": "Take-home due in 5 days",
+    "pay_range": "$130k–$150k",
+    "location": "Remote (US)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Indigo Learning/Software Engineer, AI Products/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [],
+    "job_id": "4000101096",
+    "posting_url": "https://boards.greenhouse.io/indigolearning/jobs/4000101096",
+    "apply_url": "https://boards.greenhouse.io/indigolearning/jobs/4000101096#app",
+    "ats_score": 82,
+    "fit_score": 81,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-09-28",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      },
+      {
+        "date": "2026-10-04",
+        "status": "Assessment",
+        "source": "email",
+        "detail": "email: (example)"
+      }
+    ],
+    "created": "2026-09-28T10:00:00",
+    "updated": "2026-10-04T10:00:00"
+  },
+  {
+    "id": "2026-09-30-junipergrid-9",
+    "company": "Juniper Grid",
+    "role": "Support Engineer",
+    "category": "support engineering",
+    "status": "No response",
+    "applied_date": "2026-09-30",
+    "next_step": "",
+    "pay_range": "$130k–$160k",
+    "location": "Columbus, OH (Hybrid)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Juniper Grid/Support Engineer/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [],
+    "job_id": "4000101233",
+    "posting_url": "https://boards.greenhouse.io/junipergrid/jobs/4000101233",
+    "apply_url": "https://boards.greenhouse.io/junipergrid/jobs/4000101233#app",
+    "ats_score": 82,
+    "fit_score": 92,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-09-30",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      },
+      {
+        "date": "2026-10-30",
+        "status": "No response",
+        "source": "manual",
+        "detail": "no change for 30+ days"
+      }
+    ],
+    "created": "2026-09-30T10:00:00",
+    "updated": "2026-10-30T10:00:00"
+  },
+  {
+    "id": "2026-10-02-kestrelsecurity-10",
+    "company": "Kestrel Security",
+    "role": "Frontend Engineer",
+    "category": "frontend",
+    "status": "No response",
+    "applied_date": "2026-10-02",
+    "next_step": "",
+    "pay_range": "$130k–$160k",
+    "location": "Columbus, OH (Hybrid)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Kestrel Security/Frontend Engineer/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [],
+    "job_id": "4000101370",
+    "posting_url": "https://boards.greenhouse.io/kestrelsecurity/jobs/4000101370",
+    "apply_url": "https://boards.greenhouse.io/kestrelsecurity/jobs/4000101370#app",
+    "ats_score": 94,
+    "fit_score": 81,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-10-02",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      },
+      {
+        "date": "2026-11-01",
+        "status": "No response",
+        "source": "manual",
+        "detail": "no change for 30+ days"
+      }
+    ],
+    "created": "2026-10-02T10:00:00",
+    "updated": "2026-11-01T10:00:00"
+  },
+  {
+    "id": "2026-10-03-lumenretail-11",
+    "company": "Lumen Retail",
+    "role": "Software Engineer II",
+    "category": "full stack",
+    "status": "Offer",
+    "applied_date": "2026-10-03",
+    "next_step": "Review offer",
+    "pay_range": "$140k–$175k",
+    "location": "Remote (US)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Lumen Retail/Software Engineer II/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [
+      "fl"
+    ],
+    "job_id": "4000101507",
+    "posting_url": "https://boards.greenhouse.io/lumenretail/jobs/4000101507",
+    "apply_url": "https://boards.greenhouse.io/lumenretail/jobs/4000101507#app",
+    "ats_score": 89,
+    "fit_score": 90,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-10-03",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      },
+      {
+        "date": "2026-10-17",
+        "status": "Recruiter screen",
+        "source": "email",
+        "detail": "email: (example)"
+      },
+      {
+        "date": "2026-10-28",
+        "status": "Interviewing",
+        "source": "email",
+        "detail": "email: (example)"
+      },
+      {
+        "date": "2026-11-05",
+        "status": "Offer",
+        "source": "email",
+        "detail": "email: (example)"
+      }
+    ],
+    "created": "2026-10-03T10:00:00",
+    "updated": "2026-11-05T10:00:00"
+  },
+  {
+    "id": "2026-10-06-maplelogistics-12",
+    "company": "Maple Logistics",
+    "role": "Full Stack Engineer",
+    "category": "full stack",
+    "status": "No response",
+    "applied_date": "2026-10-06",
+    "next_step": "",
+    "pay_range": "$140k–$150k",
+    "location": "Remote (US)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Maple Logistics/Full Stack Engineer/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [],
+    "job_id": "4000101644",
+    "posting_url": "https://boards.greenhouse.io/maplelogistics/jobs/4000101644",
+    "apply_url": "https://boards.greenhouse.io/maplelogistics/jobs/4000101644#app",
+    "ats_score": 91,
+    "fit_score": 82,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-10-06",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      },
+      {
+        "date": "2026-11-05",
+        "status": "No response",
+        "source": "manual",
+        "detail": "no change for 30+ days"
+      }
+    ],
+    "created": "2026-10-06T10:00:00",
+    "updated": "2026-11-05T10:00:00"
+  },
+  {
+    "id": "2026-10-08-nimbusdocs-13",
+    "company": "Nimbus Docs",
+    "role": "Backend Engineer",
+    "category": "backend",
+    "status": "Recruiter screen",
+    "applied_date": "2026-10-08",
+    "next_step": "Recruiter call",
+    "pay_range": "$115k–$150k",
+    "location": "Remote (US)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Nimbus Docs/Backend Engineer/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [],
+    "job_id": "4000101781",
+    "posting_url": "https://boards.greenhouse.io/nimbusdocs/jobs/4000101781",
+    "apply_url": "https://boards.greenhouse.io/nimbusdocs/jobs/4000101781#app",
+    "ats_score": 87,
+    "fit_score": 86,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-10-08",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      },
+      {
+        "date": "2026-10-19",
+        "status": "Recruiter screen",
+        "source": "email",
+        "detail": "email: (example)"
+      }
+    ],
+    "created": "2026-10-08T10:00:00",
+    "updated": "2026-10-19T10:00:00"
+  },
+  {
+    "id": "2026-10-11-orchardbank-14",
+    "company": "Orchard Bank",
+    "role": "Software Engineer, AI Products",
+    "category": "AI",
+    "status": "Interviewing",
+    "applied_date": "2026-10-11",
+    "next_step": "Technical interview",
+    "pay_range": "$140k–$160k",
+    "location": "Columbus, OH (Hybrid)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Orchard Bank/Software Engineer, AI Products/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [],
+    "job_id": "4000101918",
+    "posting_url": "https://boards.greenhouse.io/orchardbank/jobs/4000101918",
+    "apply_url": "https://boards.greenhouse.io/orchardbank/jobs/4000101918#app",
+    "ats_score": 84,
+    "fit_score": 93,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-10-11",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      },
+      {
+        "date": "2026-10-23",
+        "status": "Recruiter screen",
+        "source": "email",
+        "detail": "email: (example)"
+      },
+      {
+        "date": "2026-10-31",
+        "status": "Interviewing",
+        "source": "email",
+        "detail": "email: (example)"
+      }
+    ],
+    "created": "2026-10-11T10:00:00",
+    "updated": "2026-10-31T10:00:00"
+  },
+  {
+    "id": "2026-10-13-pineconemedia-15",
+    "company": "Pinecone Media",
+    "role": "Support Engineer",
+    "category": "support engineering",
+    "status": "Rejected",
+    "applied_date": "2026-10-13",
+    "next_step": "",
+    "pay_range": "$120k–$150k",
+    "location": "Remote (US)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Pinecone Media/Support Engineer/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [],
+    "job_id": "4000102055",
+    "posting_url": "https://boards.greenhouse.io/pineconemedia/jobs/4000102055",
+    "apply_url": "https://boards.greenhouse.io/pineconemedia/jobs/4000102055#app",
+    "ats_score": 84,
+    "fit_score": 81,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-10-13",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      },
+      {
+        "date": "2026-10-20",
+        "status": "Rejected",
+        "source": "email",
+        "detail": "email: (example)"
+      }
+    ],
+    "created": "2026-10-13T10:00:00",
+    "updated": "2026-10-20T10:00:00"
+  },
+  {
+    "id": "2026-10-15-quartzcloud-16",
+    "company": "Quartz Cloud",
+    "role": "Frontend Engineer",
+    "category": "frontend",
+    "status": "Rejected",
+    "applied_date": "2026-10-15",
+    "next_step": "",
+    "pay_range": "$130k–$175k",
+    "location": "Columbus, OH (Hybrid)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Quartz Cloud/Frontend Engineer/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [],
+    "job_id": "4000102192",
+    "posting_url": "https://boards.greenhouse.io/quartzcloud/jobs/4000102192",
+    "apply_url": "https://boards.greenhouse.io/quartzcloud/jobs/4000102192#app",
+    "ats_score": 88,
+    "fit_score": 84,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-10-15",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      },
+      {
+        "date": "2026-10-25",
+        "status": "Rejected",
+        "source": "email",
+        "detail": "email: (example)"
+      }
+    ],
+    "created": "2026-10-15T10:00:00",
+    "updated": "2026-10-25T10:00:00"
+  },
+  {
+    "id": "2026-10-17-riverstonelabs-17",
+    "company": "Riverstone Labs",
+    "role": "Software Engineer II",
+    "category": "full stack",
+    "status": "Applied",
+    "applied_date": "2026-10-17",
+    "next_step": "",
+    "pay_range": "$140k–$160k",
+    "location": "Remote (US)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Riverstone Labs/Software Engineer II/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [],
+    "job_id": "4000102329",
+    "posting_url": "https://boards.greenhouse.io/riverstonelabs/jobs/4000102329",
+    "apply_url": "https://boards.greenhouse.io/riverstonelabs/jobs/4000102329#app",
+    "ats_score": 81,
+    "fit_score": 87,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-10-17",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      }
+    ],
+    "created": "2026-10-17T10:00:00",
+    "updated": "2026-10-17T10:00:00"
+  },
+  {
+    "id": "2026-10-21-sableinsurance-18",
+    "company": "Sable Insurance",
+    "role": "Full Stack Engineer",
+    "category": "full stack",
+    "status": "Rejected",
+    "applied_date": "2026-10-21",
+    "next_step": "",
+    "pay_range": "$140k–$150k",
+    "location": "Remote (US)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Sable Insurance/Full Stack Engineer/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [],
+    "job_id": "4000102466",
+    "posting_url": "https://boards.greenhouse.io/sableinsurance/jobs/4000102466",
+    "apply_url": "https://boards.greenhouse.io/sableinsurance/jobs/4000102466#app",
+    "ats_score": 92,
+    "fit_score": 80,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-10-21",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      },
+      {
+        "date": "2026-10-28",
+        "status": "Rejected",
+        "source": "email",
+        "detail": "email: (example)"
+      }
+    ],
+    "created": "2026-10-21T10:00:00",
+    "updated": "2026-10-28T10:00:00"
+  },
+  {
+    "id": "2026-10-22-tidewaterenergy-19",
+    "company": "Tidewater Energy",
+    "role": "Backend Engineer",
+    "category": "backend",
+    "status": "Applied",
+    "applied_date": "2026-10-22",
+    "next_step": "",
+    "pay_range": "$115k–$160k",
+    "location": "Columbus, OH (Hybrid)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Tidewater Energy/Backend Engineer/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [
+      "fl"
+    ],
+    "job_id": "4000102603",
+    "posting_url": "https://boards.greenhouse.io/tidewaterenergy/jobs/4000102603",
+    "apply_url": "https://boards.greenhouse.io/tidewaterenergy/jobs/4000102603#app",
+    "ats_score": 83,
+    "fit_score": 80,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-10-22",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      }
+    ],
+    "created": "2026-10-22T10:00:00",
+    "updated": "2026-10-22T10:00:00"
+  },
+  {
+    "id": "2026-10-25-umbergames-20",
+    "company": "Umber Games",
+    "role": "Software Engineer, AI Products",
+    "category": "AI",
+    "status": "Applied",
+    "applied_date": "2026-10-25",
+    "next_step": "",
+    "pay_range": "$130k–$175k",
+    "location": "Remote (US)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Umber Games/Software Engineer, AI Products/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [],
+    "job_id": "4000102740",
+    "posting_url": "https://boards.greenhouse.io/umbergames/jobs/4000102740",
+    "apply_url": "https://boards.greenhouse.io/umbergames/jobs/4000102740#app",
+    "ats_score": 92,
+    "fit_score": 82,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-10-25",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      }
+    ],
+    "created": "2026-10-25T10:00:00",
+    "updated": "2026-10-25T10:00:00"
+  },
+  {
+    "id": "2026-10-27-vantagefreight-21",
+    "company": "Vantage Freight",
+    "role": "Support Engineer",
+    "category": "support engineering",
+    "status": "Interviewing",
+    "applied_date": "2026-10-27",
+    "next_step": "Technical interview",
+    "pay_range": "$120k–$150k",
+    "location": "Columbus, OH (Hybrid)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Vantage Freight/Support Engineer/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [],
+    "job_id": "4000102877",
+    "posting_url": "https://boards.greenhouse.io/vantagefreight/jobs/4000102877",
+    "apply_url": "https://boards.greenhouse.io/vantagefreight/jobs/4000102877#app",
+    "ats_score": 95,
+    "fit_score": 87,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-10-27",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      },
+      {
+        "date": "2026-11-04",
+        "status": "Recruiter screen",
+        "source": "email",
+        "detail": "email: (example)"
+      },
+      {
+        "date": "2026-11-09",
+        "status": "Interviewing",
+        "source": "email",
+        "detail": "email: (example)"
+      }
+    ],
+    "created": "2026-10-27T10:00:00",
+    "updated": "2026-11-09T10:00:00"
+  },
+  {
+    "id": "2026-10-30-willowcare-22",
+    "company": "Willow Care",
+    "role": "Frontend Engineer",
+    "category": "frontend",
+    "status": "Applied",
+    "applied_date": "2026-10-30",
+    "next_step": "",
+    "pay_range": "$115k–$150k",
+    "location": "Columbus, OH (Hybrid)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Willow Care/Frontend Engineer/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [],
+    "job_id": "4000103014",
+    "posting_url": "https://boards.greenhouse.io/willowcare/jobs/4000103014",
+    "apply_url": "https://boards.greenhouse.io/willowcare/jobs/4000103014#app",
+    "ats_score": 95,
+    "fit_score": 93,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-10-30",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      }
+    ],
+    "created": "2026-10-30T10:00:00",
+    "updated": "2026-10-30T10:00:00"
+  },
+  {
+    "id": "2026-11-03-xenodata-23",
+    "company": "Xeno Data",
+    "role": "Software Engineer II",
+    "category": "full stack",
+    "status": "Assessment",
+    "applied_date": "2026-11-03",
+    "next_step": "Take-home due in 5 days",
+    "pay_range": "$115k–$175k",
+    "location": "Remote (US)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Xeno Data/Software Engineer II/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [],
+    "job_id": "4000103151",
+    "posting_url": "https://boards.greenhouse.io/xenodata/jobs/4000103151",
+    "apply_url": "https://boards.greenhouse.io/xenodata/jobs/4000103151#app",
+    "ats_score": 80,
+    "fit_score": 92,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-11-03",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      },
+      {
+        "date": "2026-11-16",
+        "status": "Assessment",
+        "source": "email",
+        "detail": "email: (example)"
+      }
+    ],
+    "created": "2026-11-03T10:00:00",
+    "updated": "2026-11-16T10:00:00"
+  },
+  {
+    "id": "2026-11-03-yarrowfoods-24",
+    "company": "Yarrow Foods",
+    "role": "Full Stack Engineer",
+    "category": "full stack",
+    "status": "Rejected",
+    "applied_date": "2026-11-03",
+    "next_step": "",
+    "pay_range": "$130k–$175k",
+    "location": "Remote (US)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Yarrow Foods/Full Stack Engineer/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [],
+    "job_id": "4000103288",
+    "posting_url": "https://boards.greenhouse.io/yarrowfoods/jobs/4000103288",
+    "apply_url": "https://boards.greenhouse.io/yarrowfoods/jobs/4000103288#app",
+    "ats_score": 91,
+    "fit_score": 92,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-11-03",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      },
+      {
+        "date": "2026-11-15",
+        "status": "Rejected",
+        "source": "email",
+        "detail": "email: (example)"
+      }
+    ],
+    "created": "2026-11-03T10:00:00",
+    "updated": "2026-11-15T10:00:00"
+  },
+  {
+    "id": "2026-11-06-zephyrmobility-25",
+    "company": "Zephyr Mobility",
+    "role": "Backend Engineer",
+    "category": "backend",
+    "status": "Recruiter screen",
+    "applied_date": "2026-11-06",
+    "next_step": "Recruiter call",
+    "pay_range": "$120k–$175k",
+    "location": "Remote (US)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Zephyr Mobility/Backend Engineer/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [],
+    "job_id": "4000103425",
+    "posting_url": "https://boards.greenhouse.io/zephyrmobility/jobs/4000103425",
+    "apply_url": "https://boards.greenhouse.io/zephyrmobility/jobs/4000103425#app",
+    "ats_score": 87,
+    "fit_score": 93,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-11-06",
+        "status": "Applied",
+        "source": "manual",
+        "detail": "created"
+      },
+      {
+        "date": "2026-11-13",
+        "status": "Recruiter screen",
+        "source": "email",
+        "detail": "email: (example)"
+      }
+    ],
+    "created": "2026-11-06T10:00:00",
+    "updated": "2026-11-13T10:00:00"
+  },
+  {
+    "id": "2026-11-08-acmefreightcloud-26",
+    "company": "Acme Freight Cloud",
+    "role": "Platform Engineer",
+    "category": "backend",
+    "status": "To do",
+    "applied_date": null,
+    "next_step": "",
+    "pay_range": "$130k–$150k",
+    "location": "Columbus, OH (Hybrid)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Acme Freight Cloud/Platform Engineer/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [],
+    "job_id": "4000103562",
+    "posting_url": "https://boards.greenhouse.io/acmefreightcloud/jobs/4000103562",
+    "apply_url": "https://boards.greenhouse.io/acmefreightcloud/jobs/4000103562#app",
+    "ats_score": 80,
+    "fit_score": 92,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-11-08",
+        "status": "To do",
+        "source": "manual",
+        "detail": "created by score"
+      }
+    ],
+    "created": "2026-11-08T10:00:00",
+    "updated": "2026-11-08T10:00:00"
+  },
+  {
+    "id": "2026-11-11-cobaltpay-27",
+    "company": "Cobalt Pay",
+    "role": "Senior Backend Engineer",
+    "category": "backend",
+    "status": "To do",
+    "applied_date": null,
+    "next_step": "",
+    "pay_range": "$130k–$160k",
+    "location": "Remote (US)",
+    "work_mode": "remote",
+    "resume_path": "~/Downloads/Apps/Cobalt Pay/Senior Backend Engineer/resume/Jordan_Rivera_Resume.pdf",
+    "optional_roles_included": [
+      "fl"
+    ],
+    "job_id": "4000103699",
+    "posting_url": "https://boards.greenhouse.io/cobaltpay/jobs/4000103699",
+    "apply_url": "https://boards.greenhouse.io/cobaltpay/jobs/4000103699#app",
+    "ats_score": 94,
+    "fit_score": 92,
+    "notes": "Example record.",
+    "status_history": [
+      {
+        "date": "2026-11-11",
+        "status": "To do",
+        "source": "manual",
+        "detail": "created by score"
+      }
+    ],
+    "created": "2026-11-11T10:00:00",
+    "updated": "2026-11-11T10:00:00"
+  }
+]

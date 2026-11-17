@@ -1,0 +1,82 @@
+% job-applier resume template. Compiles with pdflatex (Overleaf default) or tectonic.
+%
+% AUDIT ANNOTATIONS (required; scripts/claims_audit.py reads them):
+%   - Every \item ends with a comment naming the profile facts it is built from:
+%         \item Built ... \textbf{1,200} dispatchers. % fact: nw-1
+%         \item Did X and Y.                            % fact: nw-2, nw-3
+%   - Every \resRole / \resProject / education line is followed by % id: <role-or-project-id>
+%   - The skills block sits between "% skills:start" and "% skills:end".
+% Fill <<PLACEHOLDERS>> from profile.json. Leave the annotations in the .tex you save.
+\documentclass[letterpaper,10.5pt]{article}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+\usepackage{lmodern}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[margin=0.5in, top=0.45in, bottom=0.45in]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tabularx}
+
+\definecolor{accent}{HTML}{1F5F8B}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\raggedright
+
+\newcommand{\resSection}[1]{%
+  \vspace{5pt}%
+  {\color{accent}\large\bfseries\MakeUppercase{#1}}%
+  \hspace{6pt}{\color{accent}\leaders\hrule height 0.7pt\hfill\kern0pt}\par
+  \vspace{3pt}}
+
+\newcommand{\resRole}[4]{%
+  \vspace{3pt}%
+  {\small\textbf{\color{accent}#1}\textbf{, #2, #3}\hfill\textit{#4}}\par
+  \vspace{1pt}}
+
+\newcommand{\resProject}[3]{%
+  \vspace{3pt}%
+  {\small\textbf{\color{accent}#1} $|$ \textit{#2}\hfill\textit{#3}}\par
+  \vspace{1pt}}
+
+\newenvironment{resBullets}
+  {\begin{itemize}[leftmargin=0.32in, itemsep=1pt, parsep=0pt, topsep=1pt, label={\tiny\raisebox{1.5pt}{$\bullet$}}]\small}
+  {\end{itemize}}
+
+\begin{document}
+
+\begin{center}
+  {\color{accent}\Huge\bfseries <<NAME_ON_RESUME>>}\\[4pt]
+  \footnotesize <<LOCATION>> \,$|$\, \href{tel:<<PHONE_DIGITS>>}{\underline{<<PHONE>>}} \,$|$\, \href{mailto:<<EMAIL>>}{\underline{<<EMAIL>>}} \,$|$\, \href{https://<<WEBSITE>>}{\underline{<<WEBSITE>>}} \,$|$\, \href{https://<<GITHUB>>}{\underline{<<GITHUB>>}} \,$|$\, \href{https://<<LINKEDIN>>}{\underline{<<LINKEDIN>>}}
+\end{center}
+\vspace{-4pt}
+
+\resSection{Technical Skills}
+% skills:start
+{\small
+\textbf{Languages:} <<ordered to the posting>> \\
+\textbf{Frameworks:} <<...>> \\
+\textbf{Data \& Infra:} <<...>>
+\par}
+% skills:end
+
+\resSection{Experience}
+\resRole{<<Title>>}{<<Company>>}{<<Location>>}{<<Start -- End>>} % id: <<role-id>>
+\begin{resBullets}
+  \item <<bullet>> % fact: <<fact-id>>
+\end{resBullets}
+
+\resSection{Projects}
+\resProject{<<Name>>}{<<Stack>>}{<<Dates>>} % id: <<project-id>>
+\begin{resBullets}
+  \item <<bullet>> % fact: <<fact-id>>
+\end{resBullets}
+
+\resSection{Education}
+{\small\textbf{<<Degree>>}, <<School>>, <<Location>>\hfill\textit{<<Grad date>>}\par} % id: <<edu-id>>
+
+\end{document}

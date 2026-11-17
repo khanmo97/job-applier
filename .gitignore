@@ -1,0 +1,15 @@
+# Personal data: never commit
+profile.json
+data/*
+!data/.gitkeep
+work/
+dashboard/data.js
+
+# Build / OS noise
+__pycache__/
+*.pyc
+*.aux
+*.log
+*.out
+.DS_Store
+.playwright-mcp/
