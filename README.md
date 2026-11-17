@@ -10,6 +10,8 @@ A Claude Code skill that turns a job link into a submitted application without s
 6. fills the application in your browser and stops for anything you need to decide,
 7. logs it in a local tracker, which can update itself from a job-search inbox, with a local dashboard.
 
+![Dashboard with fictional example data](docs/dashboard-light.png)
+
 ## The truth rule (the reason to use this)
 
 The resume, form answers and free-text drafts come only from `profile.json`, which holds facts you have confirmed, each with an ID.
@@ -86,7 +88,19 @@ python3 scripts/build_dashboard.py    # writes dashboard/data.js from data/appli
 open dashboard/index.html             # or double-click it
 ```
 
-It shows status totals, a funnel, applications per week, response rate by role category and by optional role, time to first response, scores vs outcome, and a filterable table linking to each posting and resume folder. Without your own data it shows the fictional example.
+It shows status totals, a funnel, applications per week, response rate by role category and by optional role, time to first response, scores vs outcome, and a filterable table linking to each posting and resume folder. Without your own data it shows the fictional example. It follows your system's light or dark mode.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/dashboard-dark.png">
+  <img alt="Dashboard overview: totals, funnel, status counts, applications per week and time to first response (fictional example data)" src="docs/dashboard-light.png">
+</picture>
+
+<details>
+<summary>Full page: response rates, scores vs outcome, and the applications table</summary>
+
+![Full dashboard with response rate by category and optional role, scores vs outcome scatter, response rate by score band, and the filterable applications table (fictional example data)](docs/dashboard-full.png)
+
+</details>
 
 ## About the scores
 
